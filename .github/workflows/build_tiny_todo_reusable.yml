@@ -21,7 +21,7 @@ jobs:
       - name: Checkout cedar-examples
         uses: actions/checkout@v4
         with:
-          repository: cedar-policy/cedar-examples
+          repository: muditchaudhary/cedar-examples
           ref: ${{ inputs.cedar_examples_ref }}
       - name: Use the specified branch
         run: cd tinytodo && head -n -2 Cargo.toml > Temp.toml && mv Temp.toml Cargo.toml && printf 'rev = "${{ inputs.cedar_policy_ref }}"' >> Cargo.toml
